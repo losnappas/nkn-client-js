@@ -444,7 +444,7 @@ Client.prototype.sendACK = function (dest, pid, encrypt) {
 };
 
 Client.prototype.getSubscribers = function (topic, options = {}) {
-  options = Object.assing({}, {offset: 0, limit: 1000, meta: false, txPool: false}, options );
+  options = Object.assign({}, {offset: 0, limit: 1000, meta: false, txPool: false}, options );
   return rpcCall(
     this.options.seedRpcServerAddr,
     'getsubscribers',
